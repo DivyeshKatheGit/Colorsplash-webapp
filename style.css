@@ -1,0 +1,235 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+body header nav
+{
+    height: 10vh;
+    width: 100%;
+    background-color: darkorange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .menu
+{
+    display: flex;
+    margin-right: 60px;
+}
+header nav .brand
+{
+    margin-left: 60px;
+    color: white;
+}
+header nav .menu li
+{
+    list-style: none;
+    margin: 0 20px;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+header nav .menu li a
+{
+    position: relative;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+}
+header nav .menu li a::before
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: white;
+}
+header nav .menu li a:hover::before
+{
+    width: 100%;
+    transition: .8s;
+}
+body main
+{
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+main h1
+{
+    color: darkorange;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    z-index: 10;
+}
+main h1 span
+{
+    -webkit-background-clip: text;
+    background-attachment: fixed;
+    animation: colorchange 12s linear infinite;
+    z-index: 10;
+}
+@keyframes colorchange
+{
+    0%,100%
+    {
+        -webkit-text-fill-color: dodgerblue;
+    }
+    16.5%
+    {
+        -webkit-text-fill-color: hotpink;
+    }
+    33%
+    {
+        -webkit-text-fill-color: yellowgreen;
+    }
+    50%
+    {
+        -webkit-text-fill-color: purple;
+    }
+    66.5%
+    {
+        -webkit-text-fill-color: crimson;
+    }
+    83%
+    {
+        -webkit-text-fill-color : black
+    }
+}
+main a , main button
+{
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    background-color: darkorange;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    color: white;
+}
+.ColorMain
+{
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.colordisplay
+{
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px 10px #dddddd;
+}
+.ColorMain .sliders .colorbtn
+{
+    display: flex;
+}
+.ColorMain .sliders .colorbtn .button
+{
+    margin: 0 10px;
+}
+
+.ColorMain .sliders .rgb
+{
+    margin: 50px 0;
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.ColorMain .sliders .rgb #r_value , .ColorMain .sliders .rgb #g_value , .ColorMain .sliders .rgb #b_value , .ColorMain .sliders .rgb #d_value
+{
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #aaaaaa;
+    color: white;
+    font-size: 1.4rem;
+    margin-left: 30px;
+    text-align: center;
+}
+#r_value
+{
+    background-color: red;
+}
+#g_value
+{
+    background-color: green;
+}
+#b_value
+{
+    background-color: blue;
+}
+#d_value
+{
+    background-color: black;
+}
+.ColorMain .sliders .rgb input[type="range"]
+{
+    width: 300px;
+    margin-left: 30px;
+    -webkit-appearance: none;
+}
+.ColorMain .sliders .rgb input[type="range"]::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    background: #ffffff;
+    cursor: pointer;
+    outline: none;
+    margin-top: -8px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+.ColorMain .sliders .rgb #red::-webkit-slider-runnable-track
+{
+    background: red;
+    height: 10px;
+}
+.ColorMain .sliders .rgb #green::-webkit-slider-runnable-track
+{
+    background: green;
+    height: 10px;
+}
+.ColorMain .sliders .rgb #blue::-webkit-slider-runnable-track
+{
+    background: blue;
+    height: 10px;
+}
+.ColorMain .sliders .rgb #degree::-webkit-slider-runnable-track
+{
+    background: black;
+    height: 10px;
+}
+.total
+{
+    width: 100%;
+    height: 15vh;
+    background-color: darkorange;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

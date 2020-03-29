@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/colorapp.js" defer></script>
+    <title>Color Picker</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <h2>Color Splash</h2>
+            </div>
+            <div class="menu">
+                <li class="menu-item"><a href="./index.html ">HOME</a></li>
+                <li class="menu-item"><a href="./color.html">COLOR</a></li>
+                <li class="menu-item"><a href="./gradient.html">GRADIENT</a></li>
+            </div>
+        </nav>
+    </header>
+    <main class="ColorMain">
+        <div class="sliders">
+            <div class="rgb">
+                <span id="r">R</span>
+                <input type="range" name="" id="red" min="0" max="255" step="1" value="0">
+                <span id="r_value">0</span>
+            </div>
+            <div class="rgb">
+                <span id="g">G</span>
+                <input type="range" name="" id="green" min="0" max="255" step="1" value="0">
+                <span id="g_value">0</span>
+            </div>
+            <div class="rgb">
+                <span id="b">B</span>
+                <input type="range" name="" id="blue" min="0" max="255" step="1" value="0">
+                <span id="b_value">0</span>
+            </div>
+            
+        </div>
+        <div class="colordisplay">
+
+        </div>
+    </main>
+    <div class="total">
+        <div class="hex">
+            <p>Hex Code</p>
+            <h2 id="hexvalue">#000000</h2>
+        </div>
+        <div class="hex">
+            <p>RGB</p>
+            <h2 id="rgbvalue">(0,0,0)</h2>
+        </div>
+    </div>
+</body>
+</html>
